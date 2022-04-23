@@ -4,18 +4,18 @@ import Darwin.C.math
 
 //1. Решить квадратное уравнение. ax^2 + bx + c = y
 
-let a = 6
-let b = 7
-let c = 1
+let a = 6.0
+let b = 7.0
+let c = 1.0
 
-let D = b^2 - 4*a*c
+let D = pow(b,2) - 4*a*c
 if D > 0 {
-    let x1 = (-b + D^(1/2)) / 2*a
-    let x2 = (-b - D^(1/2)) / 2*a
+    let x1 = (-b + sqrt(D)) / (2 * a)
+    let x2 = (-b - sqrt(D)) / (2 * a)
     print("x1= \(x1) \nx2= \(x2)")
 }
 if D == 0 {
-    let x = -b/2*a
+    let x = -b / 2*a
     print("x= \(x) ")
 }
 if D < 0 {
